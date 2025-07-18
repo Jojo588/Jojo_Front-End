@@ -21,7 +21,9 @@ const AboutMe = () => {
             />
           </div>
           {/* Text - 2/3 */}
-          <div className="md:w-2/3 text-gray-300 text-lg leading-relaxed space-y-6 text-justify max-sm:text-lg tracking-tight">
+          {/* <div className="md:w-2/3 text-gray-300 text-lg leading-relaxed space-y-6 text-justify max-sm:text-lg tracking-tight"> */}
+          <div className="md:w-2/3 text-gray-300 text-xl leading-relaxed space-y-6 text-left md:text-justify max-sm:text-lg max-sm:tracking-tight">
+
             <p>
               I’m a <span className="text-white font-semibold capitalize">front-end developer</span> with a strong interest in creating immersive online experiences. I have more than two years of experience turning innovative designs into responsive, high-performing interfaces, and I hold a Bachelor of Science in Computer Science.
             </p>
