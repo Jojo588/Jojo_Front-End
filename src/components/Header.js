@@ -87,17 +87,17 @@ const Header = ({ handleScroll, sectionRefs }) => {
             </button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-[#1a1a2e] p-6 space-y-6 text-white md:hidden">
-<ul className="mt-3 block gap-6 font-medium capitalize">
-  {['about', 'skills', 'projects', 'experience', 'contact'].map((section) => (
-    <li
-      key={section}
-      className="cursor-pointer py-2 relative transition duration-300"
-      onClick={() => {
-        setChangeMenuOption(section);
-        handleScroll[section]();
-        setIsOpen(false);
-      }}
-    >
+          <ul className="mt-3 block gap-6 font-medium capitalize">
+            {['about', 'skills', 'projects', 'experience', 'contact'].map((section) => (
+              <li
+                key={section}
+                className="cursor-pointer py-2 relative transition duration-300"
+                onClick={() => {
+                  setChangeMenuOption(section);
+                  handleScroll[section]();
+                  setIsOpen(false);
+                }}
+              >
       <span
         className={`
           relative inline-block transition-colors duration-300

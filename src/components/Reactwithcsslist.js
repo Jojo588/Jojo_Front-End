@@ -11,8 +11,8 @@ const Reactwithcsslist = [
     projectImage: project1,
     title: 'calculator',
     description: "This is a web calculator app that helps users maake calculations",
-    liveDemoLink: "hdgdb",
-    sourceCode: "dds"
+    liveDemoLink: "https://jojo588.github.io/calculatorApp/",
+    sourceCode: "https://github.com/Jojo588/calculatorApp.git"
 
   },
   {
@@ -29,8 +29,8 @@ const Reactwithcsslist = [
     projectImage: project3,
     title: 'quiz app',
     description: "this is an online quiz app that test users knowledge",
-    liveDemoLink: "cdsdcsd",
-    sourceCode: "dsfsdfsf"
+    liveDemoLink: "https://jojo588.github.io/quizApp/",
+    sourceCode: "https://github.com/Jojo588/quizApp.git"
 
   },
       {
@@ -38,8 +38,8 @@ const Reactwithcsslist = [
     projectImage: project4,
     title: 'hangman',
     description: "this is an online hangman game to entertain users",
-    liveDemoLink: "vsdvsdvsdv",
-    sourceCode: "vsvsvsdv"
+    liveDemoLink: "https://jojo588.github.io/hangman/",
+    sourceCode: "https://github.com/Jojo588/hangman.git"
 
   },
       {
@@ -47,8 +47,8 @@ const Reactwithcsslist = [
     projectImage:project5,
     title: 'note app',
     description: "this is an online note app that enables uses save notes",
-    liveDemoLink: "acsdcsdcsdc",
-    sourceCode: "dsvsdvsdv"
+    liveDemoLink: "https://jojo588.github.io/noteApp/",
+    sourceCode: "https://github.com/Jojo588/noteApp.git"
 
   },
 

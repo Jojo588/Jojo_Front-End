@@ -7,8 +7,8 @@ const ReactwithtailwindList = [
     projectImage: project1,
     title: 'Wander Wise',
     description: "This is a web app that helps users make traveling decisions",
-    liveDemoLink: "hdgdb",
-    sourceCode: "dds"
+    liveDemoLink: "https://jojo588.github.io/smartTravelPlanner/",
+    sourceCode: "https://github.com/Jojo588/smartTravelPlanner.git"
 
   },
   {
