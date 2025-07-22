@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import {FaBars} from 'react-icons/fa'
+import { FaBars, FaInfoCircle, FaTools, FaTasks, FaBriefcase, FaEnvelope } from 'react-icons/fa';
+
 import { Sheet, SheetContent, SheetTrigger } from "../components/ui/Sheet";
 
 const Header = ({ handleScroll, sectionRefs }) => {
   const [changeMenuOption, setChangeMenuOption] = useState('home');
     const [isOpen, setIsOpen] = useState(false);
   
+    const sectionIcons = {
+      about: <FaInfoCircle />,
+      skills: <FaTools />,
+      projects: <FaTasks />,
+      experience: <FaBriefcase />,
+      contact: <FaEnvelope />,
+    };
 
   useEffect(() => {
     const handleScrollEvent = () => {
@@ -88,6 +96,7 @@ const Header = ({ handleScroll, sectionRefs }) => {
           </SheetTrigger>
           <SheetContent side="right" className="bg-[#1a1a2e] p-6 space-y-6 text-white md:hidden">
           <ul className="mt-3 block gap-6 font-medium capitalize">
+            
             {['about', 'skills', 'projects', 'experience', 'contact'].map((section) => (
               <li
                 key={section}
@@ -110,7 +119,10 @@ const Header = ({ handleScroll, sectionRefs }) => {
         `}
         style={{ paddingBottom: '2px' }}
       >
+        <div className='inline-flex items-center gap-2'>
+        {sectionIcons[section]}
         {section}
+        </div>
       </span>
     </li>
   ))}

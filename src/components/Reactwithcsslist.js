@@ -20,8 +20,8 @@ const Reactwithcsslist = [
     projectImage:project2,
     title: 'meme master',
     description: "this is a web app that helps users create their own memes",
-    liveDemoLink: "vdvchd",
-    sourceCode: "bhdvhsc"
+    liveDemoLink: "https://jojo588.github.io/Meme-Master/",
+    sourceCode: "https://github.com/Jojo588/Meme-Master.git"
 
   },
     {
