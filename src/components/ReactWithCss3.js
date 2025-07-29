@@ -8,8 +8,8 @@ const ReactWithCss3 = ({ Reactwithcsslist }) => {
 
   const middleSetStart = Math.floor(repeats / 2) * totalProjects
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
-const [isMobile, setIsMobile] = useState(window.innerWidth <= 400);
-const [cardWidth, setCardWidth] = useState(350);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 400);
+  const [cardWidth, setCardWidth] = useState(350);
 
 
 
@@ -49,11 +49,6 @@ const [cardWidth, setCardWidth] = useState(350);
     scrollToProject(newIndex)
   }
 
-
-
-
-
-
 useEffect(() => {
     const updateCardWidth = () => {
   if (!scrollRef.current) return;
@@ -63,13 +58,10 @@ useEffect(() => {
   let newWidth;
 
   if (containerWidth >= 1024) {
-    // Desktop — 3 cards visible
     newWidth = (containerWidth - 2 * spacing) / 3;
   } else if (containerWidth >= 640) {
-    // Tablet — 2.5 cards
     newWidth = (containerWidth - 1.5 * spacing) / 2.5;
   } else {
-    // Mobile — 1.2 cards
     newWidth = (containerWidth - spacing) / 1.2;
   }
 
@@ -79,14 +71,10 @@ useEffect(() => {
   setCardWidth(Math.min(maxCard, Math.max(minCard, newWidth)));
 };
 
-
     updateCardWidth();
     window.addEventListener("resize", updateCardWidth);
     return () => window.removeEventListener("resize", updateCardWidth);
   }, []);
-
-
-
 
 
    useEffect(() => {
@@ -149,12 +137,9 @@ useEffect(() => {
 }, [isMobile, cardWidth, currentProjectIndex]);
 
 
-
 useEffect(() => {
     scrollToProject(currentProjectIndex);
   }, [cardWidth]);
-
-
 
    return (
     <div className="items-center flex relative bg-[#1A1A2E]">
@@ -170,25 +155,23 @@ useEffect(() => {
       </button>)}
 
       <div
-  ref={scrollRef}
-  className="w-full overflow-x-auto scroll-smooth scroll-px-6"
-  style={{
-  WebkitOverflowScrolling: "touch",
-  scrollbarWidth: "none",
-  msOverflowStyle: "none",
-  overscrollBehaviorX: "contain", // Add this line
-}}
-
-  
->
-<style>
-  {`
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    div::-webkit-scrollbar {
-      display: none;
-    }
-  `}
-</style>
+        ref={scrollRef}
+        className="w-full overflow-x-auto scroll-smooth scroll-px-6"
+        style={{
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+        overscrollBehaviorX: "contain",
+      }}
+      >
+        <style>
+          {`
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            div::-webkit-scrollbar {
+              display: none;
+            }
+          `}
+        </style>
 
         <div
           className="flex flex-nowrap py-8"

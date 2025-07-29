@@ -145,10 +145,6 @@ useEffect(() => {
     scrollToProject(currentProjectIndex);
   }, [cardWidth]);
 
-
-
-
-
   return (
     <div className="items-center flex relative bg-[#1A1A2E]">
   {  !isMobile &&  (<button
@@ -163,25 +159,23 @@ useEffect(() => {
       </button>)}
 
       <div
-  ref={scrollRef}
-  className="w-full overflow-x-auto scroll-smooth scroll-px-6"
-  style={{
-  WebkitOverflowScrolling: "touch",
-  scrollbarWidth: "none",
-  msOverflowStyle: "none",
-  overscrollBehaviorX: "contain", // Add this line
-}}
-
-  
->
-<style>
-  {`
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    div::-webkit-scrollbar {
-      display: none;
-    }
-  `}
-</style>
+        ref={scrollRef}
+        className="w-full overflow-x-auto scroll-smooth scroll-px-6"
+        style={{
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+        overscrollBehaviorX: "contain",
+      }}
+      >
+        <style>
+          {`
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            div::-webkit-scrollbar {
+              display: none;
+            }
+          `}
+        </style>
 
         <div
           className="flex flex-nowrap py-8"

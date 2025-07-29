@@ -57,7 +57,7 @@ useEffect(() => {
   return (
     <div className="bg-[#1A1A2E] text-[#EAEAEA]">
       <Header handleScroll={handleScroll} sectionRefs={sectionRefs} />
-      <div className="h-20" /> {/* Spacer for fixed header */}
+      <div className="h-20" />
       <div ref={homeRef}><Home /></div>
       <div ref={aboutRef}><AboutMe /></div>
       <div ref={skillsRef}><Skills /></div>

@@ -52,13 +52,10 @@ const JsWithCss3 = ({ jswithcsslist }) => {
   let newWidth;
 
   if (containerWidth >= 1024) {
-    // Desktop — 3 cards visible
     newWidth = (containerWidth - 2 * spacing) / 3;
   } else if (containerWidth >= 640) {
-    // Tablet — 2.5 cards
     newWidth = (containerWidth - 1.5 * spacing) / 2.5;
   } else {
-    // Mobile — 1.2 cards
     newWidth = (containerWidth - spacing) / 1.2;
   }
 
@@ -67,8 +64,6 @@ const JsWithCss3 = ({ jswithcsslist }) => {
 
   setCardWidth(Math.min(maxCard, Math.max(minCard, newWidth)));
 };
-
-
     updateCardWidth();
     window.addEventListener("resize", updateCardWidth);
     return () => window.removeEventListener("resize", updateCardWidth);
@@ -146,9 +141,6 @@ useEffect(() => {
   }, [cardWidth]);
 
 
-
-
-
   return (
     <div className="items-center flex relative bg-[#1A1A2E]">
   {  !isMobile &&  (<button
@@ -163,25 +155,23 @@ useEffect(() => {
       </button>)}
 
       <div
-  ref={scrollRef}
-  className="w-full overflow-x-auto scroll-smooth scroll-px-6"
-  style={{
-  WebkitOverflowScrolling: "touch",
-  scrollbarWidth: "none",
-  msOverflowStyle: "none",
-  overscrollBehaviorX: "contain", // Add this line
-}}
-
-  
->
-<style>
-  {`
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    div::-webkit-scrollbar {
-      display: none;
-    }
-  `}
-</style>
+        ref={scrollRef}
+        className="w-full overflow-x-auto scroll-smooth scroll-px-6"
+        style={{
+        WebkitOverflowScrolling: "touch",
+        scrollbarWidth: "none",
+        msOverflowStyle: "none",
+        overscrollBehaviorX: "contain",
+      }}  
+      >
+        <style>
+          {`
+            /* Hide scrollbar for Chrome, Safari and Opera */
+            div::-webkit-scrollbar {
+              display: none;
+            }
+          `}
+        </style>
 
         <div
           className="flex flex-nowrap py-8"
@@ -202,7 +192,6 @@ useEffect(() => {
                   ? "scale-105 shadow-xl opacity-100 z-10"
                   : "scale-95 shadow-md opacity-60 blur-sm"
               }`}
-
                 style={{
                   width: `${cardWidth}px`,
                   scrollSnapAlign: "center",
@@ -214,7 +203,6 @@ useEffect(() => {
                       }),
                 }}
               >                  
-
                 <div className="flex justify-center mb-4">
                   <img
                     src={project.projectImage || "/placeholder.svg"}
@@ -252,7 +240,7 @@ useEffect(() => {
         </div>
       </div>
 
-{  !isMobile &&    (<button
+        {  !isMobile &&    (<button
         className={`bg-[#FCA311] hover:bg-[#ffb733] text-white p-3 rounded-full shadow-md absolute -right-4 z-10 transition-all duration-300 ${
           currentProjectIndex === totalProjects - 1
             ? "opacity-0 pointer-events-none"

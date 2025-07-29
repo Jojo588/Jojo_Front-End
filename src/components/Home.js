@@ -45,7 +45,6 @@ useEffect(() => {
           className='w-1/2 object-cover rounded-xl shadow-lg max-md:h-80 max-sm:w-5/6'
         />
       </div>
-
       <div
         className={`absolute right-6 md:right-16 top-[35%] md:top-[40%] w-full md:w-1/3 text-right text-[#C5C5C5] text-lg sm:text-xl font-medium transition-all duration-500 max-md:w-11/12 max-md:top-[118%]   ${
           fade ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-6'

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaBars, FaInfoCircle, FaTools, FaTasks, FaBriefcase, FaEnvelope } from 'react-icons/fa';
-
-import { Sheet, SheetContent, SheetTrigger } from "../components/ui/Sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription  } from "../components/ui/Sheet";
+import { Button } from "../components/ui/Button";
 
 const Header = ({ handleScroll, sectionRefs }) => {
   const [changeMenuOption, setChangeMenuOption] = useState('home');
@@ -18,7 +18,7 @@ const Header = ({ handleScroll, sectionRefs }) => {
   useEffect(() => {
     const handleScrollEvent = () => {
       const scrollY = window.scrollY;
-      const offset = 100; // Adjust for fixed header
+      const offset = 100;
 
       const entries = Object.entries(sectionRefs);
       for (let [key, ref] of entries) {
@@ -36,6 +36,19 @@ const Header = ({ handleScroll, sectionRefs }) => {
     window.addEventListener('scroll', handleScrollEvent);
     return () => window.removeEventListener('scroll', handleScrollEvent);
   }, [sectionRefs]);
+
+  // useEffect that checks if the screen is on mobile view or not and closes that submenu when screen is not in mobile view
+   useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth > 765) {
+      setIsOpen(false);
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+  handleResize();
+  return () => window.removeEventListener("resize", handleResize);
+}, [setIsOpen]);
 
   return (
     <div className="fixed top-0 z-50 w-full">
@@ -84,56 +97,51 @@ const Header = ({ handleScroll, sectionRefs }) => {
             contact
           </button>
         </div>
-
-
-
         {/* Mobile Menu */}
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
-          <SheetTrigger asChild className=" duration-300 md:hidden hover:px-1 hover:border-2">
-            <button variant="ghost" size="icon">
-              <FaBars className="h-6 w-6" />
-            </button>
+          <SheetTrigger asChild className="duration-300 p-1 md:hidden">
+            <Button variant="ghost" size="icon">
+              <FaBars className="h-5 w-5" />
+            </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-[#1a1a2e] p-6 space-y-6 text-white md:hidden">
-          <ul className="mt-3 block gap-6 font-medium capitalize">
-            
-            {['about', 'skills', 'projects', 'experience', 'contact'].map((section) => (
-              <li
-                key={section}
-                className="cursor-pointer py-2 relative transition duration-300"
-                onClick={() => {
-                  setChangeMenuOption(section);
-                  handleScroll[section]();
-                  setIsOpen(false);
-                }}
-              >
-      <span
-        className={`
-          relative inline-block transition-colors duration-300
-          ${changeMenuOption === section ? 'text-[#FCA311] font-semibold' : ''}
-          after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0
-          after:h-[2px] after:bg-[#FCA311]
-          after:transition-transform after:duration-300 after:origin-left
-          after:scale-x-0 hover:after:scale-x-100
-          ${changeMenuOption === section ? 'after:scale-x-100' : ''}
-        `}
-        style={{ paddingBottom: '2px' }}
-      >
-        <div className='inline-flex items-center gap-2'>
-        {sectionIcons[section]}
-        {section}
-        </div>
-      </span>
-    </li>
-  ))}
-</ul>
+          <SheetContent side="right" className="bg-[#1a1a2e] p-6 space-y-6 text-white">
+           <SheetTitle className="visually-hidden">Main Menu</SheetTitle>
+              <SheetDescription className="visually-hidden">
+                Select a page to visit or manage your account.
+              </SheetDescription>
+            <ul className="mt-3 block gap-6 font-medium capitalize overflow-y-auto max-h-[calc(100vh-100px)] hide-scrollbar">
+              {['about', 'skills', 'projects', 'experience', 'contact'].map((section) => (
+                <li
+                  key={section}
+                  className="cursor-pointer py-2 relative transition duration-300"
+                  onClick={() => {
+                    setChangeMenuOption(section);
+                    handleScroll[section]();
+                    setIsOpen(false);
+                  }}
+                >
+                  <span
+                    className={`
+                      relative inline-block transition-colors duration-300
+                      ${changeMenuOption === section ? 'text-[#FCA311] font-semibold' : ''}
+                      after:content-[''] after:absolute after:left-0 after:right-0 after:bottom-0
+                      after:h-[2px] after:bg-[#FCA311]
+                      after:transition-transform after:duration-300 after:origin-left
+                      after:scale-x-0 hover:after:scale-x-100
+                      ${changeMenuOption === section ? 'after:scale-x-100' : ''}
+                    `}
+                    style={{ paddingBottom: '2px' }}
+                  >
+                    <div className='inline-flex items-center gap-2'>
+                    {sectionIcons[section]}
+                    {section}
+                    </div>
+                  </span>
+                </li>
+              ))}
+            </ul>
           </SheetContent>
         </Sheet>
-
-
-
-
-
       </div>
     </div>
   );

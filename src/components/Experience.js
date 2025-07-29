@@ -9,13 +9,13 @@ const Experience = () => {
       description:
         'Worked on responsive user interfaces using React and TailwindCSS. Collaborated with UI/UX designers to bring mockups to life.',
     },
-{
-  role: 'Compliance Officer (IT Support)',
-  company: 'Ghana Revenue Authority',
-  date: 'Nov 2023 – Sep 2024',
-  description:
-    'Enhanced front-end web features to improve user experience and accessibility across internal platforms. Provided technical support to staff, resolving day-to-day IT issues to ensure smooth operations within the department.',
-},
+    {
+      role: 'Compliance Officer (IT Support)',
+      company: 'Ghana Revenue Authority',
+      date: 'Nov 2023 – Sep 2024',
+      description:
+        'Enhanced front-end web features to improve user experience and accessibility across internal platforms. Provided technical support to staff, resolving day-to-day IT issues to ensure smooth operations within the department.',
+    },
 
     {
       role: 'Freelance Developer',
