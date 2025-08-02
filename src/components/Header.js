@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { FaBars, FaInfoCircle, FaTools, FaTasks, FaBriefcase, FaEnvelope } from 'react-icons/fa';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription  } from "../components/ui/Sheet";
 import { Button } from "../components/ui/Button";
+import ThemeToggle from "../components/ThemeToggle";
 
-const Header = ({ handleScroll, sectionRefs }) => {
+
+const Header = ({ handleScroll, sectionRefs, theme, setTheme }) => {
   const [changeMenuOption, setChangeMenuOption] = useState('home');
     const [isOpen, setIsOpen] = useState(false);
   
@@ -140,6 +142,9 @@ const Header = ({ handleScroll, sectionRefs }) => {
                 </li>
               ))}
             </ul>
+            <div className='absolute bottom-4'>
+            <ThemeToggle theme={theme} setTheme={setTheme}/>
+            </div>
           </SheetContent>
         </Sheet>
       </div>

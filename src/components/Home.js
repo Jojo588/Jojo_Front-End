@@ -1,8 +1,10 @@
 import React,{useState, useEffect} from 'react'
 import me from '../images/Adobe Express - file1.png'
 import profileStatements from './ProfileStatements';
+import ThemeToggle from "../components/ThemeToggle";
 
-const Home = () => {
+
+const Home = ({theme, setTheme}) => {
   const [currentProfileStatement, setCurrentProfileStatement] = useState(profileStatements[0].statement);
     const [fade, setFade] = useState(true);
     
@@ -57,6 +59,9 @@ useEffect(() => {
         <h1 className='capitalize text-lg'>
           <span className='text-3xl text-[#FCA311] font-semibold'>2</span> years experience
         </h1>
+      </div>
+      <div className='max-md:hidden fixed bottom-8 left-4 z-50 '>
+      <ThemeToggle theme={theme} setTheme={setTheme}/>
       </div>
     </div>
   )

@@ -3,11 +3,16 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+@layer components {
+  .dark input, .dark textarea {
+    color: black;
+  }
+}
+
 @layer base{
 body{
    @apply font-poppins;
     background-blend-mode: multiply;
-    
 }
 
 *{
@@ -20,10 +25,12 @@ body{
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;

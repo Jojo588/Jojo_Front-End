@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import AboutMe from './components/AboutMe';
@@ -8,6 +8,19 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 
 const App = () => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+   useEffect(() => {
+      const root = document.documentElement;
+      if (theme === "dark") {
+        root.classList.add("dark");
+      } else {
+        root.classList.remove("dark");
+      }
+      localStorage.setItem("theme", theme);
+    }, [theme]);
+
+
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const skillsRef = useRef(null);
@@ -53,12 +66,11 @@ useEffect(() => {
   };
 }, []);
 
-
   return (
-    <div className="bg-[#1A1A2E] text-[#EAEAEA]">
-      <Header handleScroll={handleScroll} sectionRefs={sectionRefs} />
+    <div className="bg-[#1A1A2E] text-[#EAEAEA] relative">
+      <Header handleScroll={handleScroll} sectionRefs={sectionRefs} theme={theme} setTheme={setTheme}/>
       <div className="h-20" />
-      <div ref={homeRef}><Home /></div>
+      <div ref={homeRef}><Home theme={theme} setTheme={setTheme}/></div>
       <div ref={aboutRef}><AboutMe /></div>
       <div ref={skillsRef}><Skills /></div>
       <div ref={projectsRef}><Projects /></div>

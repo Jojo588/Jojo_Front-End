@@ -16,17 +16,17 @@ const ReactwithtailwindList = [
     projectImage: project2,
     title: 'meal mate',
     description: "This is a web app that helps users keep track of food item expiry dates",
-    liveDemoLink: "vdvchd",
-    sourceCode: "bhdvhsc"
+    liveDemoLink: "https://jojo588.github.io/mealMate/",
+    sourceCode: "https://github.com/Jojo588/mealMate.git"
 
   },
   {
     id: '3',
     projectImage: project1,
-    title: 'Wander Wise',
-    description: "This is a web app that helps users keep track of food item expiry dates",
-    liveDemoLink: "vdvchd",
-    sourceCode: "bhdvhsc"
+    title: 'Smart Productivity Dashboard',
+    description: "This is a web app that helps users check time and weather, create todo list and write on some sticky notes",
+    liveDemoLink: "https://jojo588.github.io/SmartProductivityDashboard/",
+    sourceCode: "https://github.com/Jojo588/SmartProductivityDashboard.git"
 
   },
 
