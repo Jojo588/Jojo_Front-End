@@ -1,3 +1,5 @@
+import { FaSun, FaMoon } from "react-icons/fa";
+
 export default function ThemeToggle({ theme, setTheme }) {
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -6,9 +8,10 @@ export default function ThemeToggle({ theme, setTheme }) {
   return (
     <button
       onClick={toggleTheme}
-      className="px-4 py-2 rounded-md bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition"
+      aria-label="Toggle theme"
+      className="p-5 max-md:p-3 rounded-md bg-gray-300 text-gray-800 dark:bg-gray-800 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
     >
-      {theme === "light" ? "🌙" : "☀️"}
+      {theme === "light" ? <FaMoon className="w-5 h-5" /> : <FaSun className="w-5 h-5" />}
     </button>
   );
 }

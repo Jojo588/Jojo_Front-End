@@ -67,7 +67,7 @@ useEffect(() => {
 }, []);
 
   return (
-    <div className="bg-[#1A1A2E] text-[#EAEAEA] relative">
+    <div className="bg-gray-100 dark:bg-[#1A1A2E] text-[#EAEAEA] relative">
       <Header handleScroll={handleScroll} sectionRefs={sectionRefs} theme={theme} setTheme={setTheme}/>
       <div className="h-20" />
       <div ref={homeRef}><Home theme={theme} setTheme={setTheme}/></div>

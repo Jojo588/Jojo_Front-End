@@ -46,8 +46,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-fit px-6 py-12 md:px-20 bg-[#1A1A2E] text-[#EAEAEA]">
-      <h1 className="text-center text-4xl font-semibold capitalize mb-10 text-[#FCA311]">Contact</h1>
+    <section className="min-h-fit px-6 py-12 md:px-20 bg-gray-100 dark:bg-[#1A1A2E] text-black dark:text-gray-100 transition-all duration-500">
+      <h1 className="text-center text-4xl font-semibold capitalize mb-10 text-[#FCA311]">
+        Contact
+      </h1>
 
       <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
         {/* Contact Info */}
@@ -70,14 +72,24 @@ const Contact = () => {
 
           <div className="flex items-center gap-4">
             <FaLinkedin className="text-[#FCA311] text-xl" />
-            <a href={contactInfo.linkedin} target="_blank" rel="noreferrer" className="hover:underline text-[#C5C5C5]">
+            <a
+              href={contactInfo.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:underline text-gray-600 dark:text-gray-400"
+            >
               linkedin.com/in/benedict-jojo-afful
             </a>
           </div>
 
           <div className="flex items-center gap-4">
             <FaGithub className="text-[#FCA311] text-xl" />
-            <a href={contactInfo.github} target="_blank" rel="noreferrer" className="hover:underline text-[#C5C5C5]">
+            <a
+              href={contactInfo.github}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:underline text-gray-600 dark:text-gray-400"
+            >
               github.com/Jojo588
             </a>
           </div>
@@ -90,21 +102,21 @@ const Contact = () => {
             name="name"
             placeholder="Your Name"
             required
-            className="w-full p-3 rounded-lg bg-[#16213E] border border-[#FCA311] placeholder:text-[#C5C5C5] text-white focus:ring-2 focus:ring-[#FCA311]"
+            className="w-full p-3 rounded-lg bg-gray-100 dark:bg-[#16213E] border border-[#FCA311] placeholder:text-gray-500 dark:placeholder:text-gray-400 text-black dark:text-white focus:ring-2 focus:ring-[#FCA311]"
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
             required
-            className="w-full p-3 rounded-lg bg-[#16213E] border border-[#FCA311] placeholder:text-[#C5C5C5] text-white focus:ring-2 focus:ring-[#FCA311]"
+            className="w-full p-3 rounded-lg bg-gray-100 dark:bg-[#16213E] border border-[#FCA311] placeholder:text-gray-500 dark:placeholder:text-gray-400 text-black dark:text-white focus:ring-2 focus:ring-[#FCA311]"
           />
           <textarea
             name="message"
             rows="5"
             placeholder="Your Message"
             required
-            className="w-full p-3 rounded-lg bg-[#16213E] border border-[#FCA311] placeholder:text-[#C5C5C5] text-white focus:ring-2 focus:ring-[#FCA311]"
+            className="w-full p-3 rounded-lg bg-gray-100 dark:bg-[#16213E] border border-[#FCA311] placeholder:text-gray-500 dark:placeholder:text-gray-400 text-black dark:text-white focus:ring-2 focus:ring-[#FCA311]"
           ></textarea>
           <button
             type="submit"
@@ -118,7 +130,7 @@ const Contact = () => {
             {sending ? 'Sending...' : 'Send Message'}
           </button>
           {sent && (
-            <p className="text-[#00ff9f] font-medium">
+            <p className="text-green-400 font-medium">
               Your message has been sent successfully!
             </p>
           )}

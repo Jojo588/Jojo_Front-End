@@ -146,117 +146,121 @@ useEffect(() => {
   }, [cardWidth]);
 
   return (
-    <div className="items-center flex relative bg-[#1A1A2E]">
-  {  !isMobile &&  (<button
-        className={`bg-[#FCA311] hover:bg-[#ffb733] text-white p-3 rounded-full shadow-md absolute -left-4 z-10 transition-all duration-300 ${
-          currentProjectIndex === 0
-            ? "opacity-0 pointer-events-none"
-            : "opacity-100"
-        }`}
-        onClick={handleLeftButton}
-      >
-        &lt;
-      </button>)}
+<div className="items-center flex relative bg-gray-100 dark:bg-[#1A1A2E] transition-all duration-500">
+  {!isMobile && (
+    <button
+      className={`bg-[#FCA311] hover:bg-[#ffb733] text-white p-3 rounded-full shadow-md absolute -left-4 z-10 transition-all duration-300 ${
+        currentProjectIndex === 0
+          ? "opacity-0 pointer-events-none"
+          : "opacity-100"
+      }`}
+      onClick={handleLeftButton}
+    >
+      &lt;
+    </button>
+  )}
 
-      <div
-        ref={scrollRef}
-        className="w-full overflow-x-auto scroll-smooth scroll-px-6"
-        style={{
-        WebkitOverflowScrolling: "touch",
-        scrollbarWidth: "none",
-        msOverflowStyle: "none",
-        overscrollBehaviorX: "contain",
+  <div
+    ref={scrollRef}
+    className="w-full overflow-x-auto scroll-smooth scroll-px-6"
+    style={{
+      WebkitOverflowScrolling: "touch",
+      scrollbarWidth: "none",
+      msOverflowStyle: "none",
+      overscrollBehaviorX: "contain",
+    }}
+  >
+    <style>
+      {`
+        div::-webkit-scrollbar {
+          display: none;
+        }
+      `}
+    </style>
+
+    <div
+      className="flex flex-nowrap py-8"
+      style={{
+        scrollSnapType: "x mandatory",
+        gap: "16px",
       }}
-      >
-        <style>
-          {`
-            /* Hide scrollbar for Chrome, Safari and Opera */
-            div::-webkit-scrollbar {
-              display: none;
-            }
-          `}
-        </style>
+    >
+      {infiniteProjects.map((i, index) => {
+        const project = ReactwithtailwindList[i];
+        const isActive = index === middleSetStart + currentProjectIndex;
 
-        <div
-          className="flex flex-nowrap py-8"
-          style={{
-            scrollSnapType: "x mandatory",
-            gap: "16px",
-          }}
-        >
-          {infiniteProjects.map((i, index) => {
-            const project = ReactwithtailwindList[i];
-            const isActive = index === middleSetStart + currentProjectIndex;
-
-            return (
-              <div
-                key={`${project.title}-${index}`}
-                className={`bg-[#16213E] p-5 rounded-xl shrink-0 transition-all duration-500 ease-in-out ${
-                isActive
-                  ? "scale-105 shadow-xl opacity-100 z-10"
-                  : "scale-95 shadow-md opacity-60 blur-sm"
-              }`}
-
-                style={{
-                  width: `${cardWidth}px`,
-                  scrollSnapAlign: "center",
-                  ...(isMobile
-                    ? {}
-                    : {
-                        pointerEvents: isActive ? "auto" : "none",
-                        opacity: isActive ? 1 : 0.6,
-                      }),
-                }}
-              >                  
-
-                <div className="flex justify-center mb-4">
-                  <img
-                    src={project.projectImage || "/placeholder.svg"}
-                    alt="project img"
-                    className={`w-full object-cover rounded-md h-48`}
-                  />
-                </div>
-                <h1 className="font-semibold text-[#FCA311] capitalize mb-2 text-lg md:text-xl">
-                  {project.title}
-                </h1>
-                <p className="text-[#C5C5C5] mb-4 text-sm">{project.description}</p>
-                <div className="flex justify-between">
-                  <a
-                    href={project.liveDemoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="bg-[#FCA311] text-white rounded-md hover:bg-[#e89c0f] transition px-4 py-1 text-sm">
-                      Live Demo
-                    </button>
-                  </a>
-                  <a
-                    href={project.sourceCode}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <button className="bg-[#0F3460] text-white rounded-md hover:bg-[#0b2c52] transition px-4 py-1 text-sm">
-                      Source Code
-                    </button>
-                  </a>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-
-{  !isMobile &&    (<button
-        className={`bg-[#FCA311] hover:bg-[#ffb733] text-white p-3 rounded-full shadow-md absolute -right-4 z-10 transition-all duration-300 ${
-          currentProjectIndex === totalProjects - 1
-            ? "opacity-0 pointer-events-none"
-            : "opacity-100"
-        }`}
-        onClick={handleRightButton}
-      >
-        &gt;
-      </button>)}
+        return (
+          <div
+            key={`${project.title}-${index}`}
+            className={`bg-gray-200 dark:bg-[#16213E] p-5 rounded-xl shrink-0 transition-all duration-500 ease-in-out ${
+              isActive
+                ? "scale-105 shadow-xl opacity-100 z-10"
+                : "scale-95 shadow-md opacity-60 blur-sm"
+            }`}
+            style={{
+              width: `${cardWidth}px`,
+              scrollSnapAlign: "center",
+              ...(isMobile
+                ? {}
+                : {
+                    pointerEvents: isActive ? "auto" : "none",
+                    opacity: isActive ? 1 : 0.6,
+                  }),
+            }}
+          >
+            <div className="flex justify-center mb-4">
+              <img
+                src={project.projectImage || "/placeholder.svg"}
+                alt="project img"
+                className="w-full object-cover rounded-md h-48"
+              />
+            </div>
+            <h1 className="font-semibold text-[#FCA311] capitalize mb-2 text-lg md:text-xl">
+              {project.title}
+            </h1>
+            <p className="text-gray-700 dark:text-[#C5C5C5] mb-4 text-sm">
+              {project.description}
+            </p>
+            <div className="flex justify-between">
+              <a
+                href={project.liveDemoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-[#FCA311] text-white rounded-md hover:bg-[#e89c0f] transition px-4 py-1 text-sm">
+                  Live Demo
+                </button>
+              </a>
+              <a
+                href={project.sourceCode}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-[#0F3460] text-white rounded-md hover:bg-[#0b2c52] transition px-4 py-1 text-sm">
+                  Source Code
+                </button>
+              </a>
+            </div>
+          </div>
+        );
+      })}
     </div>
+  </div>
+
+  {!isMobile && (
+    <button
+      className={`bg-[#FCA311] hover:bg-[#ffb733] text-white p-3 rounded-full shadow-md absolute -right-4 z-10 transition-all duration-300 ${
+        currentProjectIndex === totalProjects - 1
+          ? "opacity-0 pointer-events-none"
+          : "opacity-100"
+      }`}
+      onClick={handleRightButton}
+    >
+      &gt;
+    </button>
+  )}
+</div>
+
   );
 };
 

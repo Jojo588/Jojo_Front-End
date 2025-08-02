@@ -1,36 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ✅ Google Font: Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-@layer components {
-  .dark input, .dark textarea {
-    color: black;
+@layer base {
+  html {
+    /* ✅ Smooth dark/light transition */
+    transition: background-color 0.4s ease-in, color 0.4s ease-in;
   }
-}
 
-@layer base{
-body{
-   @apply font-poppins;
+  body {
+    @apply font-poppins;
     background-blend-mode: multiply;
-}
+  }
 
-*{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
 }
 
-}
+/* ✅ Optional: Scrollbar hiding */
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
-
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
+/* ✅ Accessibility utility */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -40,4 +42,13 @@ body{
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@layer components {
+  /* ✅ Ensure inputs in dark mode remain legible */
+  .dark input,
+  .dark textarea {
+    color: black;
+    background-color: white;
+  }
 }
