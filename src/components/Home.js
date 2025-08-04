@@ -3,7 +3,7 @@ import me from '../images/Adobe Express - file1.png';
 import profileStatements from './ProfileStatements';
 import ThemeToggle from "../components/ThemeToggle";
 
-const Home = ({ theme, setTheme }) => {
+const Home = ({ portfolioTheme, setPortfolioTheme }) => {
   const [currentProfileStatement, setCurrentProfileStatement] = useState(profileStatements[0].statement);
   const [fade, setFade] = useState(true);
 
@@ -55,7 +55,7 @@ const Home = ({ theme, setTheme }) => {
       </div>
 
       <div className="max-md:hidden fixed bottom-8 left-4 z-50">
-        <ThemeToggle theme={theme} setTheme={setTheme} />
+        <ThemeToggle portfolioTheme={portfolioTheme} setPortfolioTheme={setPortfolioTheme} />
       </div>
     </div>
   );

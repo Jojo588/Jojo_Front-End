@@ -8,17 +8,17 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 
 const App = () => {
-  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+  const [portfolioTheme, setPortfolioTheme] = useState(localStorage.getItem("theme") || "light");
 
    useEffect(() => {
       const root = document.documentElement;
-      if (theme === "dark") {
+      if (portfolioTheme === "dark") {
         root.classList.add("dark");
       } else {
         root.classList.remove("dark");
       }
-      localStorage.setItem("theme", theme);
-    }, [theme]);
+      localStorage.setItem("theme", portfolioTheme);
+    }, [portfolioTheme]);
 
 
   const homeRef = useRef(null);
@@ -68,9 +68,9 @@ useEffect(() => {
 
   return (
     <div className="bg-gray-100 dark:bg-[#1A1A2E] text-[#EAEAEA] relative">
-      <Header handleScroll={handleScroll} sectionRefs={sectionRefs} theme={theme} setTheme={setTheme}/>
+      <Header handleScroll={handleScroll} sectionRefs={sectionRefs} portfolioTheme={portfolioTheme} setPortfolioTheme={setPortfolioTheme}/>
       <div className="h-20" />
-      <div ref={homeRef}><Home theme={theme} setTheme={setTheme}/></div>
+      <div ref={homeRef}><Home portfolioTheme={portfolioTheme} setPortfolioTheme={setPortfolioTheme}/></div>
       <div ref={aboutRef}><AboutMe /></div>
       <div ref={skillsRef}><Skills /></div>
       <div ref={projectsRef}><Projects /></div>

@@ -4,7 +4,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from 
 import { Button } from "../components/ui/Button";
 import ThemeToggle from "../components/ThemeToggle";
 
-const Header = ({ handleScroll, sectionRefs, theme, setTheme }) => {
+const Header = ({ handleScroll, sectionRefs, portfolioTheme, setPortfolioTheme }) => {
   const [changeMenuOption, setChangeMenuOption] = useState('home');
   const [isOpen, setIsOpen] = useState(false);
 
@@ -140,7 +140,7 @@ const Header = ({ handleScroll, sectionRefs, theme, setTheme }) => {
             </ul>
 
             <div className="absolute bottom-4">
-              <ThemeToggle theme={theme} setTheme={setTheme} />
+              <ThemeToggle portfolioTheme={portfolioTheme} setThesetPortfolioThememe={setPortfolioTheme} />
             </div>
           </SheetContent>
         </Sheet>
