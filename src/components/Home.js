@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import me from '../images/Adobe Express - file1.png';
 import profileStatements from './ProfileStatements';
-import ThemeToggle from "../components/ThemeToggle";
+import PortfolioThemeToggle from '../components/PortfolioThemeToggle';
 
 const Home = ({ portfolioTheme, setPortfolioTheme }) => {
   const [currentProfileStatement, setCurrentProfileStatement] = useState(profileStatements[0].statement);
@@ -55,7 +55,7 @@ const Home = ({ portfolioTheme, setPortfolioTheme }) => {
       </div>
 
       <div className="max-md:hidden fixed bottom-8 left-4 z-50">
-        <ThemeToggle portfolioTheme={portfolioTheme} setPortfolioTheme={setPortfolioTheme} />
+        <PortfolioThemeToggle portfolioTheme={portfolioTheme} setPortfolioTheme={setPortfolioTheme} />
       </div>
     </div>
   );

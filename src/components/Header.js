@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FaBars, FaInfoCircle, FaTools, FaTasks, FaBriefcase, FaEnvelope } from 'react-icons/fa';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from "../components/ui/Sheet";
 import { Button } from "../components/ui/Button";
-import ThemeToggle from "../components/ThemeToggle";
+import PortfolioThemeToggle from '../components/PortfolioThemeToggle';
 
 const Header = ({ handleScroll, sectionRefs, portfolioTheme, setPortfolioTheme }) => {
   const [changeMenuOption, setChangeMenuOption] = useState('home');
@@ -140,7 +140,7 @@ const Header = ({ handleScroll, sectionRefs, portfolioTheme, setPortfolioTheme }
             </ul>
 
             <div className="absolute bottom-6">
-              <ThemeToggle portfolioTheme={portfolioTheme} setThesetPortfolioThememe={setPortfolioTheme} />
+              <PortfolioThemeToggle portfolioTheme={portfolioTheme} setPortfolioTheme={setPortfolioTheme} />
             </div>
           </SheetContent>
         </Sheet>
