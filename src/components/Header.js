@@ -139,7 +139,7 @@ const Header = ({ handleScroll, sectionRefs, portfolioTheme, setPortfolioTheme }
               ))}
             </ul>
 
-            <div className="absolute bottom-4">
+            <div className="absolute bottom-6">
               <ThemeToggle portfolioTheme={portfolioTheme} setThesetPortfolioThememe={setPortfolioTheme} />
             </div>
           </SheetContent>
