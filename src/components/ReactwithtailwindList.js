@@ -1,6 +1,7 @@
 import project1 from '../images/projectImages/reactwithtailwind/weatherapp.png'
 import project2 from '../images/projectImages/reactwithtailwind/mealmateapp.png'
 import project3 from '../images/projectImages/reactwithtailwind/SmartProductivityDashboard.png'
+import project4 from '../images/projectImages/reactwithtailwind/StyleCraft.png'
 
 const ReactwithtailwindList = [
 {
@@ -28,6 +29,15 @@ const ReactwithtailwindList = [
     description: "This is a web app that helps users check time and weather, create todo list and write on some sticky notes",
     liveDemoLink: "https://jojo588.github.io/SmartProductivityDashboard/",
     sourceCode: "https://github.com/Jojo588/SmartProductivityDashboard.git"
+
+  },
+  {
+    id: '4',
+    projectImage: project4,
+    title: 'StyleCraft',
+    description: "This is a web app that helps users customize kente cloths into dress designs",
+    liveDemoLink: "https://jojo588.github.io/StyleCraft/",
+    sourceCode: "https://github.com/Jojo588/StyleCraft.git"
 
   },
 
