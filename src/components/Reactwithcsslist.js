@@ -3,6 +3,8 @@ import project2 from '../images/projectImages/reactwithcss/calculator.png'
 import project3 from '../images/projectImages/reactwithcss/quizapp.png'
 import project4 from '../images/projectImages/reactwithcss/hangman.png'
 import project5 from '../images/projectImages/reactwithcss/noteapp.png'
+import project6 from '../images/projectImages/reactwithcss/taskFlow.png'
+import project7 from '../images/projectImages/reactwithcss/blogPage.png'
 
 
 const Reactwithcsslist = [
@@ -49,6 +51,24 @@ const Reactwithcsslist = [
     description: "this is an online note app that enables uses save notes",
     liveDemoLink: "https://jojo588.github.io/noteApp/",
     sourceCode: "https://github.com/Jojo588/noteApp.git"
+
+  },
+    {
+    id: '6',
+    projectImage:project6,
+    title: 'taskflow',
+    description: "this is a fictional landing page for task management",
+    liveDemoLink: "https://tech-landing-page-pxcq.vercel.app/",
+    sourceCode: "https://github.com/Jojo588/taskflow.git"
+
+  },
+    {
+    id: '7',
+    projectImage:project7,
+    title: 'blogPage',
+    description: "this is a landing page for a blog website",
+    liveDemoLink: "https://blog-page-fawn.vercel.app/",
+    sourceCode: "https://github.com/Jojo588/blogPage.git"
 
   },
 

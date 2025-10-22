@@ -2,6 +2,8 @@ import project1 from '../images/projectImages/jswithcss/ecommerce.png'
 import project2 from '../images/projectImages/jswithcss/mediaplayer.png'
 import project3 from '../images/projectImages/jswithcss/landingpage.png'
 import project4 from '../images/projectImages/jswithcss/hangman.png'
+import project5 from '../images/projectImages/jswithcss/weatherApp.png'
+import project6 from '../images/projectImages/jswithcss/cyberShield.png'
 
 
 const jswithcsslist = [
@@ -41,7 +43,24 @@ const jswithcsslist = [
     sourceCode: "https://github.com/Jojo588/Hangman-Game.git"
 
   },
+  {
+    id: '5',
+    projectImage: project5,
+    title: 'weather app',
+    description: "this is a dashboard that displays weather details for searched cities",
+    liveDemoLink: "https://weather-app-seven-delta-58.vercel.app/",
+    sourceCode: "https://github.com/Jojo588/weatherApp.git"
 
+  },
+  {
+    id: '6',
+    projectImage: project6,
+    title: 'cyberShield',
+    description: "this is a fictional tech landing page for a cybersecurity company",
+    liveDemoLink: "https://tech-landing-page-pearl.vercel.app/",
+    sourceCode: "https://github.com/Jojo588/techLandingPage.git"
+
+  },
 
   ];
 export default jswithcsslist;

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import me from '../images/Adobe Express - file1.png';
+import me from '../images/me.png';
 import profileStatements from './ProfileStatements';
 import PortfolioThemeToggle from '../components/PortfolioThemeToggle';
+import meInDarkMode from '../images/meInDarkMode.png'
 
 const Home = ({ portfolioTheme, setPortfolioTheme }) => {
   const [currentProfileStatement, setCurrentProfileStatement] = useState(profileStatements[0].statement);
@@ -32,13 +33,24 @@ const Home = ({ portfolioTheme, setPortfolioTheme }) => {
         </div>
       </div>
 
+    {portfolioTheme === "dark"? 
+    <div className="-mt-20 flex justify-center max-md:mt-0">
+        <img
+          src={meInDarkMode}
+          alt="developer"
+          className="w-2/5 max-xl:1/2 max-lg:w-1/2 object-cover rounded-xl shadow-lg max-md:h-80 max-sm:w-11/12"
+        />
+      </div>
+      :
       <div className="-mt-20 flex justify-center max-md:mt-0">
         <img
           src={me}
-          alt="developer"
-          className="w-1/2 object-cover rounded-xl shadow-lg max-md:h-80 max-sm:w-5/6"
+          alt="developer in darkmode"
+          className="w-1/3 max-lg:w-2/5 object-cover rounded-xl shadow-lg max-md:h-80  max-sm:w-11/12"
         />
       </div>
+      }
+      
 
       <div
         className={`absolute right-6 md:right-16 top-[35%] md:top-[40%] w-full md:w-1/3 text-right text-gray-600 dark:text-gray-300 text-lg sm:text-xl font-medium transition-all duration-500 max-md:w-11/12 max-md:top-[118%] ${
@@ -49,7 +61,7 @@ const Home = ({ portfolioTheme, setPortfolioTheme }) => {
       </div>
 
       <div className="flex justify-between items-center -mt-24 px-4">
-        <h1 className="capitalize text-lg">
+        <h1 className="capitalize text-lg max-sm:text-stone-300">
           <span className="text-3xl text-[#FCA311] font-semibold">2</span> years experience
         </h1>
       </div>
