@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Jojo_Front-End/static/css/main.10ca14c0.css",
-    "main.js": "/Jojo_Front-End/static/js/main.9abadc96.js",
+    "main.css": "/Jojo_Front-End/static/css/main.62e18eec.css",
+    "main.js": "/Jojo_Front-End/static/js/main.fa4aecd9.js",
     "static/js/453.f0e33eac.chunk.js": "/Jojo_Front-End/static/js/453.f0e33eac.chunk.js",
-    "static/media/meInDarkMode.png": "/Jojo_Front-End/static/media/meInDarkMode.4bf6d2e4c91f162b8ae5.png",
-    "static/media/me.png": "/Jojo_Front-End/static/media/me.fb11036524835f96af89.png",
+    "static/media/meInDarkMode.png": "/Jojo_Front-End/static/media/meInDarkMode.645b68bed8da5fdeb146.png",
+    "static/media/me.png": "/Jojo_Front-End/static/media/me.4ef6ec6fcf567d5f0f7d.png",
     "static/media/blogPage.png": "/Jojo_Front-End/static/media/blogPage.033b40dc8534a9fd5963.png",
     "static/media/Picsart_24-01-28_17-43-05-434x.jpg": "/Jojo_Front-End/static/media/Picsart_24-01-28_17-43-05-434x.c35bc7182e89a01aa008.jpg",
     "static/media/noteapp.png": "/Jojo_Front-End/static/media/noteapp.ce3033a57cafa42708b4.png",
@@ -25,12 +25,12 @@
     "static/media/SmartProductivityDashboard.png": "/Jojo_Front-End/static/media/SmartProductivityDashboard.68ca4a91976bfab0ea45.png",
     "static/media/hangman.png": "/Jojo_Front-End/static/media/hangman.1efc89700472490a3c83.png",
     "index.html": "/Jojo_Front-End/index.html",
-    "main.10ca14c0.css.map": "/Jojo_Front-End/static/css/main.10ca14c0.css.map",
-    "main.9abadc96.js.map": "/Jojo_Front-End/static/js/main.9abadc96.js.map",
+    "main.62e18eec.css.map": "/Jojo_Front-End/static/css/main.62e18eec.css.map",
+    "main.fa4aecd9.js.map": "/Jojo_Front-End/static/js/main.fa4aecd9.js.map",
     "453.f0e33eac.chunk.js.map": "/Jojo_Front-End/static/js/453.f0e33eac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10ca14c0.css",
-    "static/js/main.9abadc96.js"
+    "static/css/main.62e18eec.css",
+    "static/js/main.fa4aecd9.js"
   ]
 }
