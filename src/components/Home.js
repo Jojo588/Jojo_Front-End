@@ -38,7 +38,7 @@ const Home = ({ portfolioTheme, setPortfolioTheme }) => {
         <img
           src={meInDarkMode}
           alt="developer"
-          className="w-2/5 max-xl:1/2 max-lg:w-1/2 object-cover rounded-xl shadow-lg max-md:h-80 max-sm:w-11/12"
+          className="w-2/5 max-xl:1/2 max-lg:w-1/2 object-cover rounded-xl shadow-lg max-md:h-80 max-sm:w-11/12 max-sm:h-fit"
         />
       </div>
       :
