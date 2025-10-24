@@ -12,7 +12,7 @@ const Reactwithcsslist = [
     id: '1',
     projectImage:project1,
     title: 'meme master',
-    description: "this is a web app that helps users create their own memes",
+    description: "This is a web app that helps users create their own memes",
     liveDemoLink: "https://jojo588.github.io/Meme-Master/",
     sourceCode: "https://github.com/Jojo588/Meme-Master.git"
 
@@ -21,7 +21,7 @@ const Reactwithcsslist = [
     id: '2',
     projectImage: project2,
     title: 'calculator',
-    description: "This is a web calculator app that helps users maake calculations",
+    description: "This is a web calculator app that helps users make calculations",
     liveDemoLink: "https://jojo588.github.io/calculatorApp/",
     sourceCode: "https://github.com/Jojo588/calculatorApp.git"
 
@@ -30,7 +30,7 @@ const Reactwithcsslist = [
     id: '3',
     projectImage: project3,
     title: 'quiz app',
-    description: "this is an online quiz app that test users knowledge",
+    description: "This is an online quiz app that test users knowledge",
     liveDemoLink: "https://jojo588.github.io/quizApp/",
     sourceCode: "https://github.com/Jojo588/quizApp.git"
 
@@ -39,7 +39,7 @@ const Reactwithcsslist = [
     id: '4',
     projectImage: project4,
     title: 'hangman',
-    description: "this is an online hangman game to entertain users",
+    description: "This is an online hangman game to entertain users",
     liveDemoLink: "https://jojo588.github.io/hangman/",
     sourceCode: "https://github.com/Jojo588/hangman.git"
 
@@ -48,7 +48,7 @@ const Reactwithcsslist = [
     id: '5',
     projectImage:project5,
     title: 'note app',
-    description: "this is an online note app that enables uses save notes",
+    description: "This is an online note app that enables uses save notes",
     liveDemoLink: "https://jojo588.github.io/noteApp/",
     sourceCode: "https://github.com/Jojo588/noteApp.git"
 
@@ -57,7 +57,7 @@ const Reactwithcsslist = [
     id: '6',
     projectImage:project6,
     title: 'taskflow',
-    description: "this is a fictional landing page for task management",
+    description: "This is a fictional landing page for task management",
     liveDemoLink: "https://tech-landing-page-pxcq.vercel.app/",
     sourceCode: "https://github.com/Jojo588/taskflow.git"
 
@@ -66,7 +66,7 @@ const Reactwithcsslist = [
     id: '7',
     projectImage:project7,
     title: 'blogPage',
-    description: "this is a landing page for a blog website",
+    description: "This is a landing page for a blog website",
     liveDemoLink: "https://blog-page-fawn.vercel.app/",
     sourceCode: "https://github.com/Jojo588/blogPage.git"
 

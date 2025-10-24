@@ -11,7 +11,7 @@ const jswithcsslist = [
     id: '1',
     projectImage: project1,
     title: 'shop ease',
-    description: "an ecommerce web app for buying items",
+    description: "An ecommerce web app for buying items",
     liveDemoLink: "https://jojo588.github.io/Shop-Ease/",
     sourceCode: "https://github.com/Jojo588/Shop-Ease.git"
 
@@ -20,7 +20,7 @@ const jswithcsslist = [
     id: '2',
     projectImage: project2,
     title: 'media player',
-    description: "online media player that allows users to play online media",
+    description: "Online media player that allows users to play online media",
     liveDemoLink: "https://jojo588.github.io/Media-Player/",
     sourceCode: "https://github.com/Jojo588/Media-Player.git"
 
@@ -29,7 +29,7 @@ const jswithcsslist = [
     id: '3',
     projectImage: project3,
     title: 'tech flow',
-    description: "a landing page for a tech company",
+    description: "A landing page for a tech company",
     liveDemoLink: "https://jojo588.github.io/Tech_Flow-Landing-Page/",
     sourceCode: "https://github.com/Jojo588/Tech_Flow-Landing-Page.git"
 
@@ -38,7 +38,7 @@ const jswithcsslist = [
     id: '4',
     projectImage: project4,
     title: 'hangman',
-    description: "this is an online hangman game to entertain users",
+    description: "This is an online hangman game to entertain users",
     liveDemoLink: "https://jojo588.github.io/Hangman-Game/",
     sourceCode: "https://github.com/Jojo588/Hangman-Game.git"
 
@@ -47,7 +47,7 @@ const jswithcsslist = [
     id: '5',
     projectImage: project5,
     title: 'weather app',
-    description: "this is a dashboard that displays weather details for searched cities",
+    description: "This is a dashboard that displays weather details for searched cities",
     liveDemoLink: "https://weather-app-seven-delta-58.vercel.app/",
     sourceCode: "https://github.com/Jojo588/weatherApp.git"
 
@@ -56,7 +56,7 @@ const jswithcsslist = [
     id: '6',
     projectImage: project6,
     title: 'cyberShield',
-    description: "this is a fictional tech landing page for a cybersecurity company",
+    description: "This is a fictional tech landing page for a cybersecurity company",
     liveDemoLink: "https://tech-landing-page-pearl.vercel.app/",
     sourceCode: "https://github.com/Jojo588/techLandingPage.git"
 
