@@ -62,7 +62,7 @@ const Home = ({ portfolioTheme, setPortfolioTheme }) => {
 
       <div className="flex justify-between items-center -mt-24 px-4">
         <h1 className="capitalize text-lg max-sm:text-stone-300">
-          <span className="text-3xl text-[#FCA311] font-semibold">2</span> years experience
+          <span className="text-3xl text-[#FCA311] font-semibold">3</span> years experience
         </h1>
       </div>
 
